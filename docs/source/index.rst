@@ -7,8 +7,10 @@ Welcome to SparkingSpork.github.io's documentation!
 ===================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
+
+   remote/vscode_remote
 
 
 
