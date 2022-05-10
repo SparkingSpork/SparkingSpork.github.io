@@ -19,26 +19,19 @@ Requirements
 -  OpenSSH (included in Windows 10 as of autumn 2018)
 -  Visual Studio Code with the `Remote – SSH
    Extension <https://code.visualstudio.com/docs/remote/ssh>`__
--  `NI Linux Real-Time x64
-   System <https://www.ni.com/en-us/support/documentation/compatibility/17/real-time-controllers-and-real-time-operating-system-compatibili.html>`__
-
+-  `NI Linux Real-Time x64 System <https://www.ni.com/en-us/support/documentation/compatibility/17/real-time-controllers-and-real-time-operating-system-compatibili.html>`_
    -  **Note:** The system should not be in safe mode and should have
-      software installed. ARMv7 NI Linux Real-Time devices are not
-      supported.
+   software installed. ARMv7 NI Linux Real-Time devices are not
+   supported.
 
 A Note on Support
 -----------------
 
-While the process documented here worked at the time of writing, this
-may change as improvements and modifications are made to both the NI
-Linux Real-Time Operating System and the Visual Studio Code Remote SSH
-Extension. This tutorial was created with a cRIO-9035, the CompactRIO
-19.1 Software Set, Visual Studio Code 1.43.2, and Remote – SSH Extension
-0.50.1.
+While the process documented here worked at the time of writing, this may change as improvements and modifications are made to both the NI 
+Linux Real-Time Operating System and the Visual Studio Code Remote SSH Extension. This tutorial was created with a cRIO-9035, the CompactRIO
+19.1 Software Set, Visual Studio Code 1.43.2, and Remote – SSH Extension 0.50.1.
 
-For official NI policies on support of third-party Linux tools, refer to
-the `NI Linux Real-Time
-FAQ <https://forums.ni.com/t5/NI-Linux-Real-Time-Documents/NI-Linux-Real-Time-FAQ/ta-p/3495630?profile.language=en>`__.
+For official NI policies on support of third-party Linux tools, refer to the `NI Linux Real-Time FAQ <https://forums.ni.com/t5/NI-Linux-Real-Time-Documents/NI-Linux-Real-Time-FAQ/ta-p/3495630?profile.language=en>`_.
 
 Why Remote Development?
 =======================
@@ -86,11 +79,11 @@ required packages such as the GNU C Compiler and related tools.
 
 #. In NI MAX, navigate to the **System Settings** for the NI Linux
    Real-Time device.
-
 #. | Under **Startup Settings**, confirm that the **Enable Secure Shell
      Server (sshd)** is checked. If not, enable it and click **Save** to
      apply the change and reboot the system.
-   | 
+   
+   .. image:: media/image1.png
 
 Configuring SSH Keys
 --------------------
@@ -117,12 +110,16 @@ connection.
 
 #. | In a Command Prompt or PowerShell, open an SSH connection to the
      remote host.
-   | 
+   
+   .. image:: media/image2.png
 
 #. | Run the following command to update the list of available packages
      in `the NI-hosted package
      repository <http://download.ni.com/ni-linux-rt/feeds/>`__.
-   | opkg update
+     
+   .. code-block:: bash
+   
+      opkg update
 
 #. Using opkg, the following packages need to be installed via the opkg
    install *<package name(s)>* command:
@@ -142,14 +139,17 @@ Visual Studio Code.
 #. Launch Visual Studio Code on the Host PC.
 
 #. | In Visual Studio Code, open the **Remote Explorer** view.
-   | 
+
+   .. image:: media/image3.png
 
 #. | Click the **+** button in the **SSH Targets** list to add a new
      target.
-   | 
+
+   .. image:: media/image4.png
 
 #. | Enter the ssh command to connect to the target and hit **Enter**.
-   | 
+
+   .. image:: media/image5.png
 
 #. Select the SSH configuration file you wish the profile to be saved
    to. E.g., for user-specific configurations use
@@ -157,20 +157,24 @@ Visual Studio Code.
 
 #. | The NI Linux Real-Time target should now appear as an option under
      the **SSH Targets** view.
-   | 
+
+     .. image:: media/image6.png
 
 #. | In Visual Studio Code, right-click on the NI Linux Real-Time target
      and select **Connect to Host in Current Window**. This will
      initialize a connection to the remote host and install the required
      Visual Studio Code components.
-   | 
+
+   .. image:: media/image7.png
 
 #. | When prompted, choose **Linux** as the platform of the remote host.
-   | 
+
+   .. image:: media/image8.png
 
 #. | Visual Studio Code will install the required remote components.
    | **Note:** You may receive the following warning message:
-   | 
+
+   .. image:: media/image9.png
 
    This message can be safely ignored after confirming the proper
    versions. Refer to `Remote host / container / WSL Linux
@@ -192,17 +196,20 @@ Studio Code environment for remote development. To add this extension:
    Studio Code for Remote Development** section of this document.
 
 #. | Open the **Extensions** view.
-   | 
+
+   .. image:: media/image10.png
 
 #. | In the **Extensions** view, search for the **C/C++** Extension.
-   | 
+
+   .. image:: media/image11.png
 
 #. Click the option to **Install on SSH** to install the extension to
    the remote host.
 
 #. | Once the installation is complete, click the **Reload Required**
      option to restart Visual Studio Code with the extension.
-   | 
+
+   .. image:: media/image12.png
 
 **Note:** Using the C/C++ extension will keep an IntelliSense cache on
 the remote target. This has the potential to get very large with larger
@@ -228,24 +235,28 @@ C/C++ extension.
 #. | First, create a folder to act as the workspace root. This can be
      done in a terminal by navigating to **Terminal >> New Terminal** in
      the menu bar.
-   | 
+   
+   .. image:: media/image13.png
 
 #. | In Visual Studio Code, open the folder by navigating to **File >>
      Open Folder**, then entering the file path desired. **Note:** You
      can also open local folders but doing so will close the SSH
      Connection and revert VS Code to a local environment.
-   | 
+   
+   .. image:: media/image14.png
 
 #. | Create folders for the project in the Explorer view either with the
      **New Folder** button or by using the right-click >> **New Folder**
      option.
-   | 
+   
+   .. image:: media/image15.png
 
 #. | Hit **Ctrl + Shift + P** to open the Command Palette, then search
      for and select **C/C++: Edit Configurations (JSON)**. This will
      create and open a *c_cpp_properties.json* file in the .\ *vscode*
      directory.
-   | 
+   
+   .. image:: media/image16.png
 
 #. | Complete the configuration file as shown below.
     
@@ -275,10 +286,47 @@ C/C++ extension.
      choose the Others template. This will create a *tasks.json* file in
      the *.vscode* directory from which shell command tasks can be
      defined. Alternatively, create the file manually.
-   | 
+   
+   .. image:: media/image18.png
 
-#. Configure *tasks.json* as shown below.
-   ``json     {       // See https://go.microsoft.com/fwlink/?LinkId=733558       // for the documentation about the tasks.json format       "version": "2.0.0",       "tasks": [         {           "label": "CMake",           "type": "shell",           "command": "cmake ${workspaceFolder}/build",           "options": {             "cwd": "${workspaceFolder}/build"           },           "problemMatcher": []         },         {           "label": "make",           "type": "shell",           "command": "make",           "options": {             "cwd": "${workspaceFolder}/build"           },           "problemMatcher": "$gcc"         },         {           "label": "clean",           "type": "shell",           "command": "make clean",           "options": {             "cwd": "${workspaceFolder}/build"           },           "problemMatcher": []         }       ]     }``
+#. | Configure *tasks.json* as shown below.
+   
+   .. code-block:: json
+
+      {
+         // See https://go.microsoft.com/fwlink/?LinkId=733558
+         // for the documentation about the tasks.json format
+         "version": "2.0.0",
+         "tasks": [
+            {
+               "label": "CMake",
+               "type": "shell",
+               "command": "cmake ${workspaceFolder}/build",
+               "options": {
+                  "cwd": "${workspaceFolder}/build"
+               },
+               "problemMatcher": []
+            },
+            {
+               "label": "make",
+               "type": "shell",
+               "command": "make",
+               "options": {
+                  "cwd": "${workspaceFolder}/build"
+               },
+               "problemMatcher": "$gcc"
+            },
+            {
+               "label": "clean",
+               "type": "shell",
+               "command": "make clean",
+               "options": {
+                  "cwd": "${workspaceFolder}/build"
+               },
+               "problemMatcher": []
+            }
+         ]
+      }
 
 #. Save and close *tasks.json.*
 
@@ -292,7 +340,8 @@ similar.
 #. | In the **Explorer** view, create a new file titled *helloWorld.c*
      in the *src* directory by clicking the **New File** button or
      right-clicking and selecting **New File**.
-   | 
+   
+   .. image:: media/image20.png
 
 #. Complete the source file as shown below. Note the IntelliSense
    functionality provided by the C/C++ extension.
@@ -321,7 +370,8 @@ for each tool.
 #. | In the **Explorer** view, create a new file titled *CMakeLists.txt*
      in the *build* directory. This file will define the parameters used
      by CMake to generate a make file for the project.
-   | 
+
+   .. image:: media/image22.png 
 
 #. Complete the file as shown below. Refer to the CMake documentation
    for additional configuration options such as compiler flags.
@@ -345,13 +395,15 @@ for each tool.
      Run Task** then **CMake.** This will run the task created
      previously to allow Visual Studio Code to invoke CMake. Note the
      output in the terminal.
-   | 
+
+   .. image:: media/image24.png 
 
 #. From the **Tasks: Run Task**, select **make** to build the executable
    by invoking GNU make.
 
 #. | Confirm that the executable build successfully.
-   | 
+   
+   .. image:: media/image25.png
 
 Running the Executable
 ----------------------
@@ -362,35 +414,41 @@ properly.
 #. Open using **Terminal >> New Terminal** from the menu bar.
 
 #. | Change directories to the location of the executable file.
-   | 
+
+   .. image:: media/image26.png
 
 #. | Run the executable and confirm that it prints the “Hello World!!!”
      message to the console.
-   | 
+   
+   .. image:: media/image27.png
 
 Debugging
 ---------
 
 #. | Open the **Run** view in Visual Studio Code.
-   | 
+
+   .. image:: media/image28.png
 
 #. Click the option to **create a launch.json file** to create a launch
    template. For more information on the *launch.json* file, refer to
    the official Visual Studio Code documentation.
 
 #. | When prompted, select **C++ (GDB/LLDB)** as the environment.
-   | 
+   
+   .. image:: media/image29.png
 
 #. | This will create and open a *launch.json* file. Complete the file
      as shown below.
-   | 
+   
+   .. image:: media/image30.png
 
 #. Save the configuration.
 
 #. Open the source file (e.g., helloWorld.c).
 
 #. | Place a breakpoint where needed.
-   | 
+   
+   .. image:: media/image31.png
 
 #. Click the green arrow in the **Run** view to start debugging. Note
    that this creates a new Terminal which will show the application
@@ -401,8 +459,8 @@ Debugging
 Additional Resources
 ====================
 
--  `Introduction to NI Linux Real-Time <https://www.ni.com/en-us/innovations/white-papers/13/introduction-to-ni-linux-real-time.html>`
--  `NI Linux Real-Time Cross Compiling: Using the NI Linux Real-Time Cross Compile Toolchain with Visual Studio Code <https://forums.ni.com/t5/NI-Linux-Real-Time-Documents/NI-Linux-Real-Time-Cross-Compiling-Using-the-NI-Linux-Real-Time/ta-p/4026449>`
-   -  `NI Linux Real-Time Community <https://forums.ni.com/t5/NI-Linux-Real-Time/ct-p/7013>`
--  `NI Linux Real-Time kernel source <https://github.com/ni/linux>`
--  `C/C++ Embedded System Design Tools <https://www.ni.com/en-us/innovations/white-papers/13/c-c---embedded-system-design-tools.html>`
+-  `Introduction to NI Linux Real-Time <https://www.ni.com/en-us/innovations/white-papers/13/introduction-to-ni-linux-real-time.html>`_
+-  `NI Linux Real-Time Cross Compiling: Using the NI Linux Real-Time Cross Compile Toolchain with Visual Studio Code <https://forums.ni.com/t5/NI-Linux-Real-Time-Documents/NI-Linux-Real-Time-Cross-Compiling-Using-the-NI-Linux-Real-Time/ta-p/4026449>`_
+   -  `NI Linux Real-Time Community <https://forums.ni.com/t5/NI-Linux-Real-Time/ct-p/7013>`_
+-  `NI Linux Real-Time kernel source <https://github.com/ni/linux>`_
+-  `C/C++ Embedded System Design Tools <https://www.ni.com/en-us/innovations/white-papers/13/c-c---embedded-system-design-tools.html>`_
