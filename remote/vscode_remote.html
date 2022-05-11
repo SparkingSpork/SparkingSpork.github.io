@@ -18,7 +18,8 @@
     <script src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Welcome to SparkingSpork.github.io’s documentation!" href="../index.html" />
+    <link rel="next" title="Opkg Package System Tutorials" href="../opkg/opkg_tutorials_index.html" />
+    <link rel="prev" title="Visual Studio Code Remote Extension Tutorials" href="vscode_remote_index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
     <script src="_static/css3-mediaqueries.js"></script>
@@ -31,9 +32,13 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../index.html" title="Welcome to SparkingSpork.github.io’s documentation!"
+          <a href="../opkg/opkg_tutorials_index.html" title="Opkg Package System Tutorials"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vscode_remote_index.html" title="Visual Studio Code Remote Extension Tutorials"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">SparkingSpork.github.io 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="vscode_remote_index.html" accesskey="U">Visual Studio Code Remote Extension Tutorials</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Developing C/C++ Code for NI Linux Real-Time with the Visual Studio Code Remote Development Extension</a></li> 
       </ul>
     </div>  
@@ -146,7 +151,7 @@ Real-Time device.</p></li>
 Server (sshd)</strong> is checked. If not, enable it and click <strong>Save</strong> to
 apply the change and reboot the system.</div>
 </div>
-<img alt="../_images/image1.png" src="../_images/image1.png" />
+<img alt="../_images/image12.png" src="../_images/image12.png" />
 </li>
 </ol>
 </section>
@@ -174,7 +179,7 @@ connection.</p>
 <div class="line">In a Command Prompt or PowerShell, open an SSH connection to the
 remote host.</div>
 </div>
-<img alt="../_images/image2.png" src="../_images/image2.png" />
+<img alt="../_images/image27.png" src="../_images/image27.png" />
 </li>
 <li><div class="line-block">
 <div class="line">Run the following command to update the list of available packages
@@ -206,7 +211,7 @@ Visual Studio Code.</p>
 <li><div class="line-block">
 <div class="line">In Visual Studio Code, open the <strong>Remote Explorer</strong> view.</div>
 </div>
-<img alt="../_images/image3.png" src="../_images/image3.png" />
+<img alt="../_images/image31.png" src="../_images/image31.png" />
 </li>
 <li><div class="line-block">
 <div class="line">Click the <strong>+</strong> button in the <strong>SSH Targets</strong> list to add a new
@@ -236,18 +241,18 @@ and select <strong>Connect to Host in Current Window</strong>. This will
 initialize a connection to the remote host and install the required
 Visual Studio Code components.</div>
 </div>
-<img alt="../_images/image7.png" src="../_images/image7.png" />
+<img alt="../_images/image71.png" src="../_images/image71.png" />
 </li>
 <li><div class="line-block">
 <div class="line">When prompted, choose <strong>Linux</strong> as the platform of the remote host.</div>
 </div>
-<img alt="../_images/image8.png" src="../_images/image8.png" />
+<img alt="../_images/image81.png" src="../_images/image81.png" />
 </li>
 <li><div class="line-block">
 <div class="line">Visual Studio Code will install the required remote components.</div>
 <div class="line"><strong>Note:</strong> You may receive the following warning message:</div>
 </div>
-<img alt="../_images/image9.png" src="../_images/image9.png" />
+<img alt="../_images/image91.png" src="../_images/image91.png" />
 <p>This message can be safely ignored after confirming the proper
 versions. Refer to <a class="reference external" href="https://code.visualstudio.com/docs/remote/linux#_remote-host-container-wsl-linux-prerequisites">Remote host / container / WSL Linux
 prerequisites</a>
@@ -270,12 +275,12 @@ Studio Code for Remote Development</strong> section of this document.</p></li>
 <li><div class="line-block">
 <div class="line">Open the <strong>Extensions</strong> view.</div>
 </div>
-<img alt="../_images/image10.png" src="../_images/image10.png" />
+<img alt="../_images/image101.png" src="../_images/image101.png" />
 </li>
 <li><div class="line-block">
 <div class="line">In the <strong>Extensions</strong> view, search for the <strong>C/C++</strong> Extension.</div>
 </div>
-<img alt="../_images/image11.png" src="../_images/image11.png" />
+<img alt="../_images/image111.png" src="../_images/image111.png" />
 </li>
 <li><p>Click the option to <strong>Install on SSH</strong> to install the extension to
 the remote host.</p></li>
@@ -283,7 +288,7 @@ the remote host.</p></li>
 <div class="line">Once the installation is complete, click the <strong>Reload Required</strong>
 option to restart Visual Studio Code with the extension.</div>
 </div>
-<img alt="../_images/image12.png" src="../_images/image12.png" />
+<img alt="../_images/image121.png" src="../_images/image121.png" />
 </li>
 </ol>
 <p><strong>Note:</strong> Using the C/C++ extension will keep an IntelliSense cache on
@@ -365,7 +370,7 @@ choose the Others template. This will create a <em>tasks.json</em> file in
 the <em>.vscode</em> directory from which shell command tasks can be
 defined. Alternatively, create the file manually.</div>
 </div>
-<img alt="../_images/image18.png" src="../_images/image18.png" />
+<img alt="../_images/image181.png" src="../_images/image181.png" />
 </li>
 <li><div class="line-block">
 <div class="line">Configure <em>tasks.json</em> as shown below.</div>
@@ -421,7 +426,7 @@ similar.</p>
 in the <em>src</em> directory by clicking the <strong>New File</strong> button or
 right-clicking and selecting <strong>New File</strong>.</div>
 </div>
-<img alt="../_images/image20.png" src="../_images/image20.png" />
+<img alt="../_images/image201.png" src="../_images/image201.png" />
 </li>
 <li><p>Complete the source file as shown below. Note the IntelliSense
 functionality provided by the C/C++ extension.</p>
@@ -451,7 +456,7 @@ for each tool.</p>
 in the <em>build</em> directory. This file will define the parameters used
 by CMake to generate a make file for the project.</div>
 </div>
-<img alt="../_images/image22.png" src="../_images/image22.png" />
+<img alt="../_images/image221.png" src="../_images/image221.png" />
 </li>
 <li><p>Complete the file as shown below. Refer to the CMake documentation
 for additional configuration options such as compiler flags.</p>
@@ -475,14 +480,14 @@ Run Task</strong> then <strong>CMake.</strong> This will run the task created
 previously to allow Visual Studio Code to invoke CMake. Note the
 output in the terminal.</div>
 </div>
-<img alt="../_images/image24.png" src="../_images/image24.png" />
+<img alt="../_images/image241.png" src="../_images/image241.png" />
 </li>
 <li><p>From the <strong>Tasks: Run Task</strong>, select <strong>make</strong> to build the executable
 by invoking GNU make.</p></li>
 <li><div class="line-block">
 <div class="line">Confirm that the executable build successfully.</div>
 </div>
-<img alt="../_images/image25.png" src="../_images/image25.png" />
+<img alt="../_images/image251.png" src="../_images/image251.png" />
 </li>
 </ol>
 </section>
@@ -495,13 +500,13 @@ properly.</p>
 <li><div class="line-block">
 <div class="line">Change directories to the location of the executable file.</div>
 </div>
-<img alt="../_images/image26.png" src="../_images/image26.png" />
+<img alt="../_images/image261.png" src="../_images/image261.png" />
 </li>
 <li><div class="line-block">
 <div class="line">Run the executable and confirm that it prints the “Hello World!!!”
 message to the console.</div>
 </div>
-<img alt="../_images/image27.png" src="../_images/image27.png" />
+<img alt="../_images/image271.png" src="../_images/image271.png" />
 </li>
 </ol>
 </section>
@@ -532,7 +537,7 @@ as shown below.</div>
 <li><div class="line-block">
 <div class="line">Place a breakpoint where needed.</div>
 </div>
-<img alt="../_images/image31.png" src="../_images/image31.png" />
+<img alt="../_images/image311.png" src="../_images/image311.png" />
 </li>
 <li><p>Click the green arrow in the <strong>Run</strong> view to start debugging. Note
 that this creates a new Terminal which will show the application
@@ -594,8 +599,13 @@ output while the gdb output is printed to the Debug Console.</p></li>
   </div>
   <div>
     <h4>Previous topic</h4>
-    <p class="topless"><a href="../index.html"
-                          title="previous chapter">Welcome to SparkingSpork.github.io’s documentation!</a></p>
+    <p class="topless"><a href="vscode_remote_index.html"
+                          title="previous chapter">Visual Studio Code Remote Extension Tutorials</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../opkg/opkg_tutorials_index.html"
+                          title="next chapter">Opkg Package System Tutorials</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -625,9 +635,13 @@ output while the gdb output is printed to the Debug Console.</p></li>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../index.html" title="Welcome to SparkingSpork.github.io’s documentation!"
+          <a href="../opkg/opkg_tutorials_index.html" title="Opkg Package System Tutorials"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="vscode_remote_index.html" title="Visual Studio Code Remote Extension Tutorials"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">SparkingSpork.github.io 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="vscode_remote_index.html" >Visual Studio Code Remote Extension Tutorials</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Developing C/C++ Code for NI Linux Real-Time with the Visual Studio Code Remote Development Extension</a></li> 
       </ul>
     </div>
