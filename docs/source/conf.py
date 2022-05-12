@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'SparkingSpork.github.io'
-copyright = '2022, Charlie J.'
-author = 'Charlie J.'
+project = 'nilrt-docs'
+copyright = 'NI'
+author = 'NI'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
