@@ -15,7 +15,7 @@ jobs:
     - name: Build and Commit
       uses: sphinx-notes/pages@v2
       with:
-        target_branch: 'dev/automated-updates-${{ github.sha }}'
+        target_branch: 'gh-pages'
         documentation_path: './docs/source'
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
