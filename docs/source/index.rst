@@ -10,6 +10,7 @@ Welcome to SparkingSpork.github.io's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   cross_compile/cross_compile_index
    remote/vscode_remote_index
    opkg/opkg_tutorials_index
 

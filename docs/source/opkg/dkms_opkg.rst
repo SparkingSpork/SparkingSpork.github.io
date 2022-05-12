@@ -128,7 +128,7 @@ Configuring the System
 **Note:** DKMS will already be installed when using NI Linux Real-Time
 Operating System versions 8.0.0 and later or when using a PXI Linux
 Real-Time controller. When using older systems, running the
-**updateNIDriver** commands on non-*.ipk systems can cause problems with
+**updateNIDriver** commands on non-\*.ipk systems can cause problems with
 DKMS.
 
 Before starting, the required software and toolchains must be installed
@@ -331,7 +331,7 @@ things with the other items being optional:
 2. The data files to be installed in their proper directory structure.
    In this tutorial, these files are the same as used when testing the
    DKMS module previously.
-3. A *debian-binary* file denoting the version of the \*.ipk/*.deb
+3. A *debian-binary* file denoting the version of the \*.ipk/\*.deb
    standard used
 
 The optional components required for a DKMS module are:
