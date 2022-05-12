@@ -28,7 +28,7 @@ A Note on Support
 -----------------
 
 While the process documented here worked at the time of writing, this may change as improvements and modifications are made to both the NI 
-Linux Real-Time Operating System and the Visual Studio Code Remote SSH Extension. This tutorial was created with a cRIO-9035, the CompactRIO
+Linux Real-Time Operating System and the Visual Studio Code Remote SSH Extension. This tutorial was created with a cRIO-9035, the NI CompactRIO
 19.1 Software Set, Visual Studio Code 1.43.2, and Remote – SSH Extension 0.50.1.
 
 For official NI policies on support of third-party Linux tools, refer to the `NI Linux Real-Time FAQ <https://forums.ni.com/t5/NI-Linux-Real-Time-Documents/NI-Linux-Real-Time-FAQ/ta-p/3495630?profile.language=en>`_.
