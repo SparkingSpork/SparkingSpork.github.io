@@ -15,9 +15,14 @@ jobs:
     - name: Build and Commit
       uses: sphinx-notes/pages@v2
       with:
+        target_branch: 'dev/automated-updates-${{ GITHUB_SHA }}'
         documentation_path: './docs/source'
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
+        token: ${{ secrets.GITHUB_TOKEN }}
+        base: 'gh-pages'
+        delete-branch: true
+        title: 'gh-pages updates from ${{ GITHUB_SHA }}'
+        branch: dev/automated-updates-${{ GITHUB_SHA }}
+        body: 'Automated updates to published pages from ${{ GITHUB_SHA }}'
