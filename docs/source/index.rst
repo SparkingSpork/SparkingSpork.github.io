@@ -1,10 +1,6 @@
-.. SparkingSpork.github.io documentation master file, created by
-   sphinx-quickstart on Mon May  9 15:18:29 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to SparkingSpork.github.io's documentation!
-===================================================
+==============================================
+NI Linux Real-Time Documentation and Tutorials
+==============================================
 
 .. toctree::
    :maxdepth: 2
@@ -13,12 +9,3 @@ Welcome to SparkingSpork.github.io's documentation!
    cross_compile/cross_compile_index
    remote/vscode_remote_index
    opkg/opkg_tutorials_index
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
